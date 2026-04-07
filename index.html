@@ -65,7 +65,6 @@
       Crea camisetas únicas con nuestro personalizador en línea. Sin límites.
     </p>
 
-    <!-- 🔥 AQUÍ LOS CUADROS -->
     <div class="custom-steps">
 
       <div class="step-card">
@@ -107,16 +106,33 @@
   </section>
 
 
-  <section class="newsletter section">
+ <section class="newsletter section">
     <div class="container newsletter-box">
-      <div class="newsletter-icon">🎁</div>
-      <h2 class="section-title small">ÚNETE AL CLUB</h2>
+      <section class="newsletter section">
+  <div class="container newsletter-box">
+    
+    <div class="newsletter-icon">🎁</div>
+    <h2 class="section-title small">ÚNETE AL CLUB</h2>
 
-      <form class="newsletter-form">
-        <input type="email" placeholder="tu@email.com">
-        <button class="btn btn-dark">Suscribir</button>
-      </form>
-    </div>
+    <form class="newsletter-form" id="customForm">
+  <input type="email" id="emailInput" placeholder="tu@email.com" required>
+  <button type="submit" class="btn btn-dark">Suscribir</button>
+</form>
+
+    <div id="hubspotForm"></div>
+
+  </div>
+</section>
+
+<script src="https://js.hsforms.net/forms/embed/v2.js"></script>
+<script>
+  hbspt.forms.create({
+    region: "TU_REGION",
+    portalId: "TU_PORTAL_ID",
+    formId: "TU_FORM_ID",
+    target: "#hubspotForm"
+  });
+</script>
   </section>
 
 

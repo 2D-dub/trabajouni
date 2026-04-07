@@ -115,3 +115,32 @@ testimonials.forEach(t => {
 
 renderFilters();
 renderProducts();
+document.getElementById("customForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const email = document.getElementById("emailInput").value;
+
+  fetch("https://api.hsforms.com/submissions/v3/integration/submit/TU_PORTAL_ID/TU_FORM_ID", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      fields: [
+        {
+          name: "email",
+          value: email
+        }
+      ]
+    })
+  })
+  .then(res => {
+    if (res.ok) {
+      alert("🔥 Te suscribiste correctamente");
+      document.getElementById("customForm").reset();
+    } else {
+      alert("❌ Error al enviar");
+    }
+  })
+  .catch(() => alert("❌ Error de conexión"));
+});
