@@ -698,3 +698,96 @@ input {
     font-size: 1rem;
   }
 }
+
+.newsletter.section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  display: flex;
+  justify-content: center;
+}
+
+.newsletter-box {
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  background: #141414;
+  padding: 40px 30px;
+  border-radius: 15px;
+  border: 1px solid #2a2a2a;
+  box-shadow: 0 0 20px rgba(255, 0, 85, 0.15);
+}
+
+.newsletter-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff0055, #ff4d88);
+  box-shadow: 0 0 15px rgba(255, 0, 85, 0.6);
+}
+
+.section-title.small {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #ffffff;
+  letter-spacing: 2px;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.newsletter-form input {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  outline: none;
+  background: #0f0f0f;
+  color: #fff;
+  width: 60%;
+  min-width: 220px;
+  transition: 0.3s;
+}
+
+.newsletter-form input:focus {
+  border-color: #ff0055;
+  box-shadow: 0 0 8px rgba(255, 0, 85, 0.5);
+}
+
+.btn.btn-dark {
+  padding: 12px 20px;
+  background: #ff0055;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.btn.btn-dark:hover {
+  background: #ff3377;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 0, 85, 0.4);
+}
+
+#hubspotForm {
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form input {
+    width: 100%;
+  }
+
+  .btn.btn-dark {
+    width: 100%;
+  }
+}
